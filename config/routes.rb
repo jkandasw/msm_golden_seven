@@ -4,14 +4,14 @@ Rails.application.routes.draw do
   # Route for director
 # Create
 get('/directors/new_form', { :controller => 'directors', :action => 'new_form' })
-get('/create_director', { :controller => 'movies', :action => 'create_row' })
+get('/create_director', { :controller => 'directors', :action => 'create_row' })
 
 # Read
 get('/directors', { :controller => 'directors', :action => 'index' })
-get('/directors:id', { :controller => 'movies', :action => 'show' })
+get('/directors/:id', { :controller => 'directors', :action => 'show' })
 
 # Update
-get('/directors:id/edit_form', { :controller => 'movies', :action => 'edit_form' })
+get('/directors/:id/edit_form', { :controller => 'directors', :action => 'edit_form' })
 get('/update_director/:id', { :controller => 'directors', :action => 'update_row' })
 
 # DELETE
